@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SMS Spam Detection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1>📩 SMS Spam Detection</h1>
+
+            <p>
+                AI Powered Spam Detection using Machine Learning
+            </p>
+
+        </header>
+
+        <main>
+
+            <form action="/predict" method="POST">
+
+                <textarea name="message" id="message" placeholder="Type your SMS here..." maxlength="500" required>{{ message|default('', true)|trim }}</textarea>
+
+                <div>
+                    <span id="charCount">0 / 500</span>
+                </div>
+
+                <div>
+
+                <button type="button">Clear</button>
+
+                <button type="submit">Detect Spam</button>
+
+                </div>
+
+            </form>
+
+
+            <section id="prediction-section">
+
+                <h2>Prediction Result</h2>
+
+                <div id="prediction-card">
+
+                    {% if prediction %}
+
+                        <p class="prediction-text {{ prediction.lower() }}">
+                            {{ prediction }}
+                        </p>
+
+                        <p class="confidence-text">Confidence: {{ confidence }}%</p>
+
+                        <div class="confidence-bar">
+                            <div class="confidence-fill" style="width: {{ confidence }}%;"></div>
+                        </div>
+
+                    {% else %}
+
+                        <p class="waiting-text">
+                            Waiting for prediction...
+                        </p>
+
+                    {% endif %}
+
+                </div>
+
+            </section>
+            
+        </main>
+
+        <footer>
+
+            <p>
+                Built with Flask | Scikit-Learn | Tailwind CSS
+            </p>
+
+        </footer>
+
+    </div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

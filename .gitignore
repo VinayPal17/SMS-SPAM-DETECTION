@@ -1,0 +1,63 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# ==========================
+# Jupyter Notebook
+# ==========================
+.ipynb_checkpoints/
+
+# ==========================
+# VS Code
+# ==========================
+.vscode/
+
+# ==========================
+# Environment Variables
+# ==========================
+.env
+
+# ==========================
+# OS Files
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Logs
+# ==========================
+*.log
+
+# ==========================
+# Build Files
+# ==========================
+build/
+dist/
+*.egg-info/
+
+# ==========================
+# Python Cache
+# ==========================
+.pytest_cache/
+.mypy_cache/
+
+# ==========================
+# Model Files (Optional)
+# Uncomment ONLY if model files are too large
+# ==========================
+# model/*.pkl
+# model/*.joblib
+
+# ==========================
+# Temporary Files
+# ==========================
+*.tmp
+*.temp
