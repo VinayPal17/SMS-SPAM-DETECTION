@@ -20,7 +20,7 @@ def tokenize_text(text):
     return text.split()
 
 stop_words = set(stopwords.words("english"))
-print(len(stop_words))
+
 # Keep informative words for spam detection
 stop_words.discard("won")
 
@@ -59,5 +59,4 @@ def preprocess_text(text):
 
     return " ".join(tokens)   
 
-print(preprocess_text("CONGRATULATIONS!! You've WON a FREE Ticket!!!"))
 
