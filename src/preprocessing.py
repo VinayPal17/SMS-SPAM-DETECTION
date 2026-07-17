@@ -3,6 +3,12 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 
+for resource in ["stopwords"]:
+    try:
+        nltk.data.find(f"corpora/{resource}")
+    except LookupError:
+        nltk.download(resource)
+
 def convert_to_lowercase(text):
     return text.lower()
 
