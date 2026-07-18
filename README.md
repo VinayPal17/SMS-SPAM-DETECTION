@@ -10,7 +10,7 @@ The project includes data preprocessing, feature extraction using CountVectorize
 
 > Add your deployed application link here (Render/Railway)
 
-**Live Demo:** https://your-app-url.onrender.com
+**Live Demo:** https://sms-spam-detection-b0j5.onrender.com
 
 ---
 
